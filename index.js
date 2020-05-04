@@ -1,6 +1,7 @@
 const { AkairoClient, CommandHandler } = require('discord-akairo');
 const Discord = require('discord.js')
 const db = require('quick.db');
+const config = require('./config.json');
 class MyClient extends AkairoClient {
     constructor() {
         super({
@@ -19,4 +20,4 @@ class MyClient extends AkairoClient {
 
 }
 const client = new MyClient();
-client.login('NzA2NTM1OTEwNzE5NjE5MTUy.XrBcZg.J9494eA20PLkSlXa965xMwvpcHY');
+client.login(config.token);
