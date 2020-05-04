@@ -5,13 +5,13 @@ const config = require('./config.json');
 class MyClient extends AkairoClient {
     constructor() {
         super({
-            ownerID: '123992700587343872', // or ['123992700587343872', '86890631690977280']
+            ownerID: '475281284675928084',
         }, {
             disableEveryone: true
         });
 				this.commandHandler = new CommandHandler(this, {
  			  	 directory: './commands/',
- 			  	 prefix: '$' // or ['?', '!']
+ 			  	 prefix: '$'
 
 				});
 				this.commandHandler.loadAll();
