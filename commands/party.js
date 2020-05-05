@@ -33,7 +33,7 @@ class HelpCommand extends Command {
    }
    const embed = new Discord.MessageEmbed()
      .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are currently not in a party.`);
+     .setDescription(`**${message.author.tag}**, you are not in a party.`);
     return message.channel.send(embed);
 
  }
