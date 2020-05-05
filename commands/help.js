@@ -8,7 +8,13 @@ class HelpCommand extends Command {
  }
 
  exec(message) {
+  const config = require('/home/runner/Political-Bot/config.json')
+
+  let colors = config.colors
+  let color = colors[Math.floor(Math.random() * colors.length)];	 
+
   const exampleEmbed = new Discord.MessageEmbed()
+	 .setColor(color)
    .setTitle('**Command list:**')
    .addField('**$help:**', 'Displays the help message.')
    .addField('**$setlaw:**', 'Create a new law.')
