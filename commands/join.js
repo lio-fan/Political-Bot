@@ -30,7 +30,7 @@ class JoinCommand extends Command {
 
     const embed = new Discord.MessageEmbed()
      .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are already part of the **Democrat** party.`)
+     .setDescription(`**${message.author.tag}**, you are already part of the **Democratic** party.`)
 
 
     return message.channel.send(embed);
@@ -48,7 +48,7 @@ class JoinCommand extends Command {
    message.member.roles.add(democraticRole)
    const embed = new Discord.MessageEmbed()
     .setColor(color)
-    .setDescription(`**${message.author.tag}**, You have successfully joined the **Democrat** party.`)
+    .setDescription(`**${message.author.tag}**, You have successfully joined the **Democratic** party.`)
 
    message.channel.send(embed);
   }
@@ -67,7 +67,7 @@ class JoinCommand extends Command {
 
     const embed = new Discord.MessageEmbed()
      .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are already part of the **Democrat** party.`)
+     .setDescription(`**${message.author.tag}**, you are already part of the **Democratic** party.`)
 
 
     return message.channel.send(embed);
