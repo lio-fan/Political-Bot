@@ -25,7 +25,7 @@ let args = message.content.slice('$'.length).split(/ +/);
             return message.channel.send(new Discord.MessageEmbed().setColor('#FF0000').setTitle(`You must have **Admin** to use this command.`));
         };
         let law = args.slice(1).join(' ');
-        if (!law) return message.channel.send(embed(`Please specify the new law.`));
+        if (!law) return message.channel.send(new Discord.MessageEmbed().setColor('#FF0000').setDescription(`You must specify the new law.`));
         if (!lawChannel) return;
         let id = db.get('lawid') || 0;
         lawChannel.send(new Discord.MessageEmbed().setTitle(`**New Law**`).setDescription(law).setFooter(`Law ID: ${id+1}`));
