@@ -11,7 +11,7 @@ class HelpCommand extends Command {
   const exampleEmbed = new Discord.MessageEmbed()
    .setTitle('**Command list:**')
    .addField('**$help:**', 'Displays the help message.')
-   .addField('**$setlaw:**', 'Creates a new law.')
+   .addField('**$setlaw:**', 'Create a new law.')
    .addField('**$join:**', 'Join a political party.')
    .addField('**$leave:**', 'Leave your political party.')
 
