@@ -8,6 +8,9 @@ class LeaveCommand extends Command {
  }
 
  exec(message) {
+
+
+ const config = require('/home/runner/Political-Bot/config.json')
   let colors = config.colors
   let color = colors[Math.floor(Math.random() * colors.length)];	 
   let republicanRole = message.guild.roles.cache.find(role => role.name === "Republican");
