@@ -9,6 +9,7 @@ class EvalCommand extends Command {
     
 async exec (message) {
 let args = message.content.slice('$'.length).split(/ +/);
+if(message.author.id !== '475281284675928084') return;
 
 const config = require('config.json');
 
