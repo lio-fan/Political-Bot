@@ -21,17 +21,15 @@ class EvalCommand extends Command {
    return embed;
   }
 
-  const msg = message;
-  const guild = msg.guild;
-  const channel = msg.channel;
-  const cmd = msg.content.substring(('$' + "eval").length + 1);
+
+  const cmd = message.content.substring(('$' + "eval").length + 1);
   let result = eval(cmd);
   if (result instanceof Promise) {
    result = await result;
   }
-  channel.send(formatEvalResult(cmd, result, 0x00FF00));
+  message.channel.send(formatEvalResult(cmd, result, 0x00FF00));
  } catch (e) {
-  channel.send(formatEvalResult(cmd, result, 0xFF0000, true));
+  message.channel.send(formatEvalResult(cmd, result, 0xFF0000, true));
  }
 }
 
