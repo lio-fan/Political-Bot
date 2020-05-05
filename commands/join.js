@@ -16,6 +16,7 @@ class JoinCommand extends Command {
 
 
   let republicanRole = message.guild.roles.cache.find(role => role.name === "Republican");
+  let democraticRole = message.guild.roles.cache.find(role => role.name === "Democrat");
 
   let args = message.content.slice('$'.length).split(/ +/);
 
@@ -23,22 +24,31 @@ class JoinCommand extends Command {
   if (!joinedParty) return message.channel.send('you need to specify a party to join')
 
 
-  if (joinedParty.toLowerCase === 'democrat') {
+  if (joinedParty.toLowerCase() === 'democrat') {
 
    if (message.member.roles.cache.find(r => r.name === "Democrat")) {
 
     const embed = new Discord.MessageEmbed()
      .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are already part of the **Republican** party.`)
+     .setDescription(`**${message.author.tag}**, you are already part of the **Democrat** party.`)
+
+
+    return message.channel.send(embed);
+   }
+		if (message.member.roles.cache.find(r => r.name === "Republican")) {
+
+   const embed = new Discord.MessageEmbed()
+   	.setColor(color)
+   	.setDescription(`**${message.author.tag}**, you are already part of the **Republican** party.`)
 
 
     return message.channel.send(embed);
    }
 
-   message.member.roles.add(republicanRole)
+   message.member.roles.add(democraticRole)
    const embed = new Discord.MessageEmbed()
     .setColor(color)
-    .setDescription(`**${message.author.tag}**, You have successfully joined the **Republican** party.`)
+    .setDescription(`**${message.author.tag}**, You have successfully joined the **Democrat** party.`)
 
    message.channel.send(embed);
   }
@@ -53,7 +63,15 @@ class JoinCommand extends Command {
 
     return message.channel.send(embed);
    }
+   if (message.member.roles.cache.find(r => r.name === "Democrat")) {
 
+    const embed = new Discord.MessageEmbed()
+     .setColor(color)
+     .setDescription(`**${message.author.tag}**, you are already part of the **Democrat** party.`)
+
+
+    return message.channel.send(embed);
+   }
    message.member.roles.add(republicanRole)
    const embed = new Discord.MessageEmbed()
     .setColor(color)
