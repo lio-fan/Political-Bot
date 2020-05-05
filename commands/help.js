@@ -12,7 +12,8 @@ class HelpCommand extends Command {
    .setTitle('**Command list:**')
    .addField('**$help:**', 'Displays the help message.')
    .addField('**$setlaw:**', 'Creates a new law.')
-   .addField('**$join:**', 'Joins a political party.')
+   .addField('**$join:**', 'Join a political party.')
+   .addField('**$leave:**', 'Leave your political party.')
 
   return message.channel.send(exampleEmbed);
  }
