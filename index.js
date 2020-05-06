@@ -60,7 +60,7 @@ client.on('guildMemberAdd', member => {
        member.send(embed)
 			   const alert = new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .setTitle('New nation user.')
+        .setTitle('New Citizen.')
         .setDescription(`Looks like you have a new user for your nation! Be sure to give a happy welcome to **${member.user.tag}**.`)
 				client.channels.cache.get('707700644655398942').send(alert)
 
@@ -75,6 +75,11 @@ client.on('guildMemberAdd', member => {
         .setTitle('Successfully Joined.')
         .setDescription("Well done. You've successfully joined your country, making it a stronger and better place.")
        member.send(embed)
+			   const alert = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('New Citizen.')
+        .setDescription(`Looks like you have a new user for your nation! Be sure to give a happy welcome to **${member.user.tag}**.`)
+				client.channels.cache.get('707700672631668846').send(alert)			 
        let useriden = member.id
        const guild = client.guilds.cache.get('694236382343725147')
        guild.members.cache.get(useriden).roles.add('707699504593240144')
@@ -86,6 +91,11 @@ client.on('guildMemberAdd', member => {
         .setTitle('Successfully Joined.')
         .setDescription("Well done. You've successfully joined your country, making it a stronger and better place.")
        member.send(embed)
+			   const alert = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle('New Citizen.')
+        .setDescription(`Looks like you have a new user for your nation! Be sure to give a happy welcome to **${member.user.tag}**.`)
+				client.channels.cache.get('707700696878678046').send(alert)			 
        let useriden = member.id
        const guild = client.guilds.cache.get('694236382343725147')
        guild.members.cache.get(useriden).roles.add('707699568262774794')
