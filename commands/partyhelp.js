@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 class HelpCommand extends Command {
  constructor() {
   super('partyhelp', {
-   aliases: ['partyhelp']
+   aliases: ['partyhelp', 'nationhelp']
   });
  }
 
