@@ -17,14 +17,17 @@ class JoinCommand extends Command {
 
   let unitedStatesRole = message.guild.roles.cache.find(role => role.name === "United States");
   let unitedKingdomRole = message.guild.roles.cache.find(role => role.name === "United Kingdom");
-  let chinaRole = message.guild.roles.cache.find(role => role.name === "China");
+
   let args = message.content.slice('$'.length).split(/ +/);
 
   let joinedParty = args.slice(1).join(' ');
-  if (!joinedParty) return message.channel.send('you need to specify a nation to join')
+    const embed = new Discord.MessageEmbed()
+     .setColor(color)
+     .setDescription(`**${message.author.tag}**, that is not a valid nation.`)
+  if (!joinedParty) return message.channel.send(embed)
 
 
-  if (joinedParty.toLowerCase() === 'United States') {
+  if (joinedParty.toLowerCase() === 'united states') {
 
    if (message.member.roles.cache.find(r => r.name === "United States")) {
 
@@ -61,7 +64,7 @@ class JoinCommand extends Command {
 
    message.channel.send(embed);
   }
-  if (joinedParty.toLowerCase() === 'United Kingdom') {
+  if (joinedParty.toLowerCase() === 'united kingdom') {
 
    if (message.member.roles.cache.find(r => r.name === "United Kingdom")) {
 
@@ -96,42 +99,6 @@ class JoinCommand extends Command {
     .setDescription(`**${message.author.tag}**, You have successfully joined the **United Kingdom** nation.`)
 
    message.channel.send(embed);	 
- if (joinedParty.toLowerCase() === 'China') {
-
-   if (message.member.roles.cache.find(r => r.name === "China")) {
-
-    const embed = new Discord.MessageEmbed()
-     .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are already part of the **Chinese** nation.`)
-
-
-    return message.channel.send(embed);
-   }
-   if (message.member.roles.cache.find(r => r.name === "United Kingdom")) {
-
-    const embed = new Discord.MessageEmbed()
-     .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are already part of the **United Kingdom** nation.`)
-
-
-    return message.channel.send(embed);
-   }
-   if (message.member.roles.cache.find(r => r.name === "United States")) {
-
-    const embed = new Discord.MessageEmbed()
-     .setColor(color)
-     .setDescription(`**${message.author.tag}**, you are already part of the **United States** nation.`)
-
-
-    return message.channel.send(embed);
-   }	 
-   message.member.roles.add(chinaRole)	 
-   const embed = new Discord.MessageEmbed()
-    .setColor(color)
-    .setDescription(`**${message.author.tag}**, You have successfully joined the **Chinese** nation.`)
-
-   message.channel.send(embed);
-  }
 
  }
 }

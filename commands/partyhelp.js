@@ -2,8 +2,8 @@ const { Command } = require('discord-akairo');
 const Discord = require('discord.js')
 class HelpCommand extends Command {
  constructor() {
-  super('help', {
-   aliases: ['help', 'info', 'information', 'modules', 'commands']
+  super('partyhelp', {
+   aliases: ['partyhelp']
   });
  }
 
@@ -16,11 +16,11 @@ class HelpCommand extends Command {
   const exampleEmbed = new Discord.MessageEmbed()
 	 .setColor(color)
    .setTitle('**Command list:**')
-   .addField('**$help:**', 'Displays the help message.')
-   .addField('**$setlaw:**', 'Create a new law.')
-   .addField('**$lb:**', 'Displays the leaderboard.')
-   .addField('**$vote:**', 'Vote for a leader.')
-   .addField('**$partyhelp:**', 'Displays the party/nation help message.')
+   .addField('**$party:**', 'Learn your political party.')
+   .addField('**$join:**', 'Join a political party.')
+   .addField('**$leave:**', 'Leave your political party.')
+   .addField('**$nation:**', 'Join a nation.')
+   .addField('**$nations:**', 'List all valid nations.')
 
 
   return message.channel.send(exampleEmbed);
