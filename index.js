@@ -39,9 +39,7 @@ client.on('guildMemberAdd', member => {
     .addField('**United States**:', 'Joins the United States Nation.')
     .addField('**United Kingdom**:', 'Joins the United Kingdom nation.')
     .addField('**China**:', 'Joins the China nation.')
-    .addField('**United States Spy:**', 'Join the United States nation, as a spy.')
-    .addField('**United Kingdom Spy:**', 'Join the United Kingdom nation, as a spy.')
-    .addField('**China Spy:**', 'Join the China nation, as a spy.')
+
 		.setFooter('Note: Nations are case sensitive. All words begin with an uppercase character.')
 
    member.send(embed).then(function(message) {
@@ -100,6 +98,8 @@ client.on('guildMemberAdd', member => {
        const guild = client.guilds.cache.get('694236382343725147')
        guild.members.cache.get(useriden).roles.add('707699568262774794')
       }	else {
+
+
 				
 				 const embed = new Discord.MessageEmbed()
         .setColor('RANDOM')
