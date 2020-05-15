@@ -8,7 +8,7 @@ class HelpCommand extends Command {
  }
 
  exec(message) {
-  const config = require('/home/runner/Political-Bot/config.json')
+  const config = require('/app/config.json')
 
   let colors = config.colors
   let color = colors[Math.floor(Math.random() * colors.length)];
