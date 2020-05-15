@@ -11,7 +11,7 @@ class EvalCommand extends Command {
   let args = message.content.slice('$'.length).split(/ +/);
   if (message.author.id !== '475281284675928084') return;
 
- const config = require('/home/runner/Political-Bot/config.json')
+ const config = require('/app/config.json')
   function formatEvalResult(cmd, result, color, e = false) {
    const embed = new Discord.MessageEmbed()
     .setColor(color)
