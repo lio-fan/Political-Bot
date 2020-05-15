@@ -1,7 +1,6 @@
 const { AkairoClient, CommandHandler } = require('discord-akairo');
 const Discord = require('discord.js')
 const db = require('quick.db');
-const config = require('./config.json');
 let interval = {
  seconds: 30,
  gain: 0.05
@@ -27,4 +26,4 @@ class MyClient extends AkairoClient {
 }
 const client = new MyClient();
 
-client.login(config.token);
+client.login('NzEwOTM2NzI5Mjg0MjQ3NzE2.Xr7tkw.-z-QJPPs9rZSPQx3a_tWImmDvT0');
