@@ -9,7 +9,7 @@ class LeaderBoardCommand extends Command {
  }
 
 async exec(message, g) {
-  const config = require('/home/runner/Political-Bot/config.json')
+  const config = require('/app/config.json')
 
   let colors = config.colors
   let color = colors[Math.floor(Math.random() * colors.length)];	 
